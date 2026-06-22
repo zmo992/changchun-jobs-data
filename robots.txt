@@ -1,0 +1,134 @@
+# 竞招 robots.txt - GEO 终极版（2026-06-22）
+# 思路：欢迎所有 AI 爬虫来抓取，让 AI 训练时能拿到竞招内容
+# 上传位置：https://imme.cc/t/jingzhao/robots.txt（子目录 /jingzhao/ 内）
+
+# ========================================
+# 1. 全站默认：允许所有爬虫
+# ========================================
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
+
+# ========================================
+# 2. sitemap 声明
+# ========================================
+Sitemap: https://imme.cc/t/jingzhao/sitemap.xml
+Sitemap: https://zmo992.github.io/changchun-jobs-data/sitemap.xml
+
+# ========================================
+# 3. AI 爬虫白名单（核心：让 AI 训练数据能收录竞招）
+# ========================================
+
+# ----- OpenAI -----
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# ----- Anthropic Claude -----
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# ----- Google Gemini / AI Overview -----
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+# ----- Meta Llama / Facebook -----
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# ----- Apple Intelligence -----
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# ----- 字节跳动豆包 -----
+User-agent: Bytespider
+Allow: /
+
+# ----- 百度 -----
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Baidu-Collector
+Allow: /
+
+# ----- 必应 -----
+User-agent: Bingbot
+Allow: /
+
+User-agent: MSNBot-Media
+Allow: /
+
+# ----- Common Crawl（喂给几乎所有 AI 训练集）-----
+User-agent: CCBot
+Allow: /
+
+# ----- 学术 / 数据集爬虫 -----
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# ----- 其他 AI 训练数据收集者 -----
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: magpie-crawler
+Allow: /
+
+User-agent: webz.io
+Allow: /
+
+User-agent: OJOBot
+Allow: /
+
+User-agent: TurnitinBot
+Allow: /
+
+# ========================================
+# 4. 抓取延迟（礼貌）
+# ========================================
+Crawl-delay: 1
